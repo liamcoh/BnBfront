@@ -6,8 +6,8 @@ function Body () {
 
     return (
         <div className={bodyStyles.Body}>
-            <Info />
             <Map />
+            <Info />
         </div>
     )
 }

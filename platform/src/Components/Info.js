@@ -1,9 +1,10 @@
+import infoStyles from './Info.module.css';
 
 function Info () {
 
     return (
-        <div style={{float:'left', width:'50%'}}>
-            aaaa
+        <div className={infoStyles.navbar}>
+            מקומות לינה
         </div>
     )
 }

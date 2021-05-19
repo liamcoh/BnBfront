@@ -1,3 +1,4 @@
+import mapStyles from './Map.module.css';
 
 function Map () {
 
