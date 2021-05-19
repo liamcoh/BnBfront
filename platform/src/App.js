@@ -6,14 +6,17 @@ import appStyles from './App.module.css';
 
 function App() {
 
-  //states
-
-  
+  const filters = [
+    { value: 'גישה לנכים', label: 'גישה לנכים' },
+    { value: 'בעלי חיים', label: 'בעלי חיים' },
+    { value: 'מקלט', label: 'מקלט' },
+    { value: 'כשרות', label: 'כשרות' }
+  ]
 
   return (
     <div className={appStyles.App}>
     <Header />
-    <Body />
+    <Body filters ={filters} />
   </div>
   );
 }

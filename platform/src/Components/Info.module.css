@@ -1,6 +1,26 @@
-.navbar {
+.info {
     float: left;
     width: 50%;
+}
+
+.navbar {
+    margin-top: 16px;
+    margin-right: 32px;
     text-align: right;
-    background-color: grey;
+    font-size: 32px;
+}
+
+.SliderText {
+    text-align: right;
+}
+
+.chip {
+    margin-left: 8px;
+}
+
+.filters {
+    margin-right: 32px;
+    text-align: right;
+    margin-bottom: 16px;
+    margin-top: 16px;
 }

@@ -2,12 +2,12 @@ import bodyStyles from './Body.module.css';
 import Map from './Map';
 import Info from './Info';
 
-function Body () {
+function Body ({filters}) {
 
     return (
         <div className={bodyStyles.Body}>
             <Map />
-            <Info />
+            <Info filters={filters}/>
         </div>
     )
 }
