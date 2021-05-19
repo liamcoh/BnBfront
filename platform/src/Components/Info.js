@@ -7,6 +7,7 @@ import Slider from '@material-ui/core/Slider';
 import Chip from '@material-ui/core/Chip';
 import Apartment from './Apartment';
 import { useEffect, useState } from 'react';
+import axios from "axios";
 
 
 const chips = [
@@ -30,11 +31,17 @@ function Info({ filters }) {
   const[filterColor2, setFilterColor2] = useState('default');
   const[filterColor3, setFilterColor3] = useState('default');
   const[filterColor4, setFilterColor4] = useState('default');
+  const[houses, setHouses] = useState([])
 
   var arr = [{value:filterColor1, set:setFilterColor1}, 
     {value:filterColor2, set:setFilterColor2},
     {value:filterColor3, set:setFilterColor3},
     {value:filterColor4, set:setFilterColor4}]
+
+  useEffect(async () => {
+    const res = await axios.get("http://hashlama005team8.azurewebsites.net/houses");
+    setHouses(res.data)
+  });
 
   return (
     <div className={infoStyles.info}>
@@ -58,10 +65,7 @@ function Info({ filters }) {
         }
         </div>
         <div className={useStyles().root}>
-
-          <Apartment filters={filters} />
-          <Apartment filters={filters} />
-
+          {houses.map(e => <Apartment filters={filters} apt={e} />)}
           {/* <Typography className={infoStyles.SliderText} id="discrete-slider" gutterBottom>
             מספר נפשות
           </Typography>

@@ -4,7 +4,7 @@ import Divider from '@material-ui/core/Divider';
 import { style } from '@material-ui/system';
 import Chip from '@material-ui/core/Chip';
 
-function Apartment({ filters }) {
+function Apartment({ filters, apt }) {
     return (
         <Fragment >
             <Divider />
@@ -12,20 +12,20 @@ function Apartment({ filters }) {
             <div className={styles.apartment}>
                 <img
                     className={styles.img}
-                    src='https://cf.bstatic.com/images/hotel/max1024x768/213/213503501.jpg' />
+                    src={apt.photo} />
 
                 <div className={styles.details}>
                     <div>
-                        השופטים 2, נס ציונה
+                        {apt.address.city +", "  + apt.address.street + " " + apt.address.apt}
                     </div>
                     <div>
-                        מספר מתארחים: 3
+                        {"מספר מתארחים: " + apt.maxPeople}
                     </div>
                     <div >
-                        שייקה רגב
+                        {apt.owner.name}
                     </div>
                     <div>
-                        טלפון: 0528012143
+                        {"פלאפון: " + apt.owner.contactPhone}
                     </div>
                     <div>
                         <div className={styles.filters}>
