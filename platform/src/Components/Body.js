@@ -6,8 +6,8 @@ function Body ({filters}) {
 
     return (
         <div className={bodyStyles.Body}>
-            <Map />
             <Info filters={filters}/>
+            <Map />
         </div>
     )
 }

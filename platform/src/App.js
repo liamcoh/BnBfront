@@ -5,7 +5,6 @@ import Body from './Components/Body';
 import appStyles from './App.module.css';
 
 function App() {
-<<<<<<< HEAD
 
   const filters = [
     { value: 'גישה לנכים', label: 'גישה לנכים' },
@@ -19,13 +18,6 @@ function App() {
     <Header />
     <Body filters ={filters} />
   </div>
-=======
-    return (
- <div className={appStyles.App}>
- <Header />
- <Body />
-</div>
->>>>>>> map
   );
 }
 

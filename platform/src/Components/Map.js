@@ -52,7 +52,7 @@ function Map() {
     });
 
     return (
-        <div>
+        <div style={{ width:"50%" }}>
             <Marker></Marker>
             <div ref={mapContainer} className="map-container" />
         </div>
