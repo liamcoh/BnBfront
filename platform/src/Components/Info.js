@@ -64,7 +64,7 @@ function Info({ filters }) {
             />)
         }
         </div>
-        <div className={useStyles().root}>
+        <div className={useStyles().root} style={{ overflow:'scroll', height: '670px' }}>
           {houses.map(e => <Apartment filters={filters} apt={e} />)}
           {/* <Typography className={infoStyles.SliderText} id="discrete-slider" gutterBottom>
             מספר נפשות

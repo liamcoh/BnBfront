@@ -37,3 +37,24 @@
     color: white;
     font-weight: bold;
 }
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 600px;
+    height: 470px;
+    z-index: 98;
+    border-radius: 25px;
+    box-shadow: 5px 10px #888888;
+}
+
+.item {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+}
