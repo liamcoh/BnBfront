@@ -5,6 +5,7 @@ import { style } from '@material-ui/system';
 import Chip from '@material-ui/core/Chip';
 
 function Apartment({ filters, apt }) {
+    console.log(apt)
     return (
         <Fragment >
             <Divider />
@@ -22,7 +23,7 @@ function Apartment({ filters, apt }) {
                         {"מספר מתארחים: " + apt.maxPeople}
                     </div>
                     <div >
-                        {apt.owner.name}
+                        {"שם: " + apt.owner.name}
                     </div>
                     <div>
                         {"פלאפון: " + apt.owner.contactPhone}
