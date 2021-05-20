@@ -57,15 +57,36 @@ function Info({ filters }) {
             label={filter.label}
             clickable
             color={arr[index].value}
-            onClick={() => { if(arr[index].value == 'default') 
-            arr[index].set('primary') 
-            else arr[index].set('default') }}
+            onClick={() => {
+              if(arr[index].value == 'default')
+                arr[index].set('primary')
+              else
+                arr[index].set('default')
+            }}
             style={{marginLeft:'10px', width:'90px'}} 
             />)
         }
         </div>
         <div className={useStyles().root}>
-          {houses.map(e => <Apartment filters={filters} apt={e} />)}
+          {houses
+              .filter(e => {
+                var index;
+                for (index = 0; index < filters.length; index++) {
+                  const filter = filters[index]
+                  if (arr[index].value === 'primary') {
+                    if (filter.label=== 'גישה לנכים' && e.disabledAccess)
+                      return false
+                    if (filter.label==='בעלי חיים' && e.animals)
+                      return false
+                    if (filter.label==='מקלט' && e.mamad)
+                      return false
+                    if (filter.label==='כשרות' && e.kosher)
+                      return false
+                  }
+                }
+                return true
+              })
+              .map(e => <Apartment filters={filters} apt={e} />)}
           {/* <Typography className={infoStyles.SliderText} id="discrete-slider" gutterBottom>
             מספר נפשות
           </Typography>

@@ -5,7 +5,15 @@ import { style } from '@material-ui/system';
 import Chip from '@material-ui/core/Chip';
 
 function Apartment({ filters, apt }) {
-    console.log(apt)
+    if (apt.mamad)
+        filters = filters.filter(e => e.value!=='מקלט')
+    if (apt.animals)
+        filters = filters.filter(e => e.value!=='בעלי חיים')
+    if (apt.kosher)
+        filters = filters.filter(e => e.value!=='כשרות')
+    if (apt.disabledAccess)
+        filters = filters.filter(e => e.value!=='גישה לנכים')
+
     return (
         <Fragment >
             <Divider />
