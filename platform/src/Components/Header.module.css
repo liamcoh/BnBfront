@@ -1,0 +1,39 @@
+.button {
+    text-align: left;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 6px;
+    transition-duration: 0.2s;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: skyblue; /* Green */
+    color: white;
+  }
+
+.flexBox {
+    display: flex;
+    background-color: #404040;
+    height: 60px;
+    justify-content: space-between;
+}
+
+.flexBox2 {
+    display: flex;
+}
+
+.img {
+    margin-right: 20px;
+    margin-top: 5px;
+    height: 50px;
+    width: 50px;
+}
+
+.text {
+    margin-top: 17px;
+    margin-right: 10px;
+    color: white;
+    font-weight: bold;
+}
